@@ -12,7 +12,7 @@ local createdBlips = {}
 
 function PurchaseVehicle(dealer, info)
     if not info then
-        print("^1Error: Vehicle info is missing.")  -- Debug print
+        
         return
     end
 
@@ -21,7 +21,7 @@ function PurchaseVehicle(dealer, info)
     })
 
     if not input then
-        print("^1Purchase canceled by the user.")  -- Debug print
+       
         return
     end
 
@@ -100,7 +100,7 @@ end)
 AddEventHandler("ND_Dealership:menuItemSelected", function(selected)
     if selected.menuType == "switch" then
         if not selectedVehicle then
-            print("^1Error: No vehicle slot selected.")  -- Debug print
+            
             return
         end
 
@@ -117,7 +117,7 @@ AddEventHandler("ND_Dealership:menuItemSelected", function(selected)
             DeleteEntity(vehicle)
         end
 
-        print("Switching showroom vehicle for slot:", selectedVehicle)  -- Debug print
+       
         TriggerServerEvent("ND_Dealership:switchShowroomVehicle", selectedVehicle, selected.dealership, selected.category, selected.index, properties)
     elseif selected.menuType == "interact" then
         pedInteract.viewVehicle(selected)
@@ -150,7 +150,7 @@ AddEventHandler("ND_Dealership:createVehicleTargets", function(vehicles, dealer)
             distance = 1.5,
             onSelect = function(data)
                 selectedVehicle = Showroom.getSlotFromEntity(data.entity)
-                print("Selected vehicle slot:", selectedVehicle)  -- Debug print
+               
                 Menu.show(dealer, "switch")
             end
         }
@@ -195,9 +195,9 @@ end)
 RegisterCommand("vehprops", function(source, args, rawCommand)
     local veh = cache.vehicle
     if not DoesEntityExist(veh) then
-        print("^1Error: No vehicle found.")  -- Debug print
+       
         return
     end
     lib.setClipboard(("[[%s]]"):format(json.encode(lib.getVehicleProperties(veh))))
-    print("^2Vehicle properties copied to clipboard.")  -- Debug print
+    
 end, false)

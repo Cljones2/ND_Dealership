@@ -51,7 +51,7 @@ local function getDealerVehicles(categoryVehicles)
 
         -- Check if the model exists in the game
         if not IsModelInCdimage(model) or not IsModelAVehicle(model) then
-            print(string.format("^3Vehicle model '%s' wasn't found. It might not exist or isn't a valid vehicle model.", model))
+            
         else
             local label = vehicleInfo.menuLabel or vehicleInfo.label or getVehicleLabel(model)
             if vehicleInfo.label then
@@ -104,7 +104,7 @@ for dealership, dealerInfo in pairs(Data.dealerships) do
         lib.hideMenu()
         local vehicleInfo = categoryVehicles[scrollIndex]
 
-        print("Selected vehicle:", vehicleInfo.model)
+        
         
         TriggerEvent("ND_Dealership:menuItemSelected", {
             dealership = dealership,
@@ -120,7 +120,7 @@ for dealership, dealerInfo in pairs(Data.dealerships) do
         Wait(1000)
         lib.showMenu(string.format("ND_Dealership:%s", dealership))
     else
-        print("^1Error: Invalid category or vehicle index.")
+        
     end
 end)
 end

@@ -12,7 +12,7 @@ function showroom.deleteVehicles(vehicles)
     for i = 1, #vehicles do
         local vehicle = vehicles[i]
         if DoesEntityExist(vehicle) then
-            print("Deleting vehicle:", vehicle)  -- Debug print
+            
             DeleteEntity(vehicle)
         end
     end
@@ -122,7 +122,7 @@ function showroom.createVehicle(selectedVehicle, dealer, index, vehicleInfo)
 
     local oldVehicle = sr[selectedVehicle] and sr[selectedVehicle].vehicle
     if oldVehicle and DoesEntityExist(oldVehicle) then
-        print("Deleting old vehicle:", oldVehicle)  -- Debug print
+        
         DeleteEntity(oldVehicle)
     end
 
@@ -131,7 +131,7 @@ function showroom.createVehicle(selectedVehicle, dealer, index, vehicleInfo)
     local info = sr[selectedVehicle]
 
     local loc = info.location
-    print(("Spawning new vehicle at coordinates: x: %f, y: %f, z: %f, w: %f"):format(loc.x, loc.y, loc.z, loc.w))
+    
 
     lib.requestModel(info.model)
     while not HasModelLoaded(info.model) do
@@ -141,9 +141,9 @@ function showroom.createVehicle(selectedVehicle, dealer, index, vehicleInfo)
     local vehicle = CreateVehicle(info.model, loc.x, loc.y, loc.z, loc.w, false, false)
 
     if DoesEntityExist(vehicle) then
-        print("New vehicle created successfully:", vehicle)  -- Debug print
+        
     else
-        print("^1Error: New vehicle creation failed.")  -- Debug print
+        
         showroom.switchInProgress = false
         return
     end
@@ -182,7 +182,7 @@ function showroom.createPoints()
 
         function point:onEnter()
             SetTimeout(500, function()
-                print("Entering showroom area for dealer:", dealer)  -- Debug print
+               
                 -- Clear any existing vehicles before spawning new ones
                 showroom.deleteVehicles(showroom.vehicles[dealer])
                 showroom.vehicles[dealer] = {}
@@ -196,7 +196,7 @@ function showroom.createPoints()
         end
 
         function point:onExit()
-            print("Exiting showroom area for dealer:", dealer)  -- Debug print
+            
             showroom.deleteVehicles(showroom.vehicles[dealer])
             showroom.vehicles[dealer] = {}
             showroom.slots = {}
