@@ -1,9 +1,5 @@
 return {
-    ["MRPD"] = {
-        { model = `police`, price = 6000, label = "Crown Vic" },
-        { model = `police2`, price = 25000, label = "Charger" },
-        { model = `police3`, price = 15000, label = "Taurus" }
-    },
+    
     ["planes"] = {
         { model = "velum2", price = 2000000 },
         { model = "Shamal", price = 1200000 },
@@ -417,5 +413,45 @@ return {
         { model = `tribike`, price = 300 },
         { model = `tribike2`, price = 350 },
         { model = `tribike3`, price = 400 }
-    }    
+    },
+	
+--['Civilians'] = {
+  --  { model = 'civ70', price = 50000 },
+  --  { model = 'civ71', price = 50000 },
+ --   { model = 'iak_wheelchair', price = 50000 },
+ --   { model = 'Kart20', price = 50000 },
+ --   { model = 'CIV1', price = 50000 },
+ --   { model = 'CIV4', price = 50000 },
+ --   { model = 'CIV5', price = 50000 },
+ --   { model = 'CIV6', price = 50000 },
+ --   { model = 'CIV7', price = 50000 },
+ --   { model = 'CIV8', price = 50000 },
+ --   { model = 'CIV9', price = 50000 },
+ --   { model = 'CIV10', price = 50000 },
+ --   { model = 'CIV11', price = 50000 },
+ --   { model = 'CIV12', price = 50000 },
+ --   { model = 'CIV13', price = 50000 },
+--    { model = 'CIV14', price = 50000 },
+ --   { model = 'CIV15', price = 50000 },
+--    { model = 'CIV17', price = 50000 },
+--    { model = 'CIV19', price = 50000 },
+--    { model = 'CIV20', price = 50000 },
+ --   { model = 'CIV21', price = 50000 },
+ --   { model = 'CIV22', price = 50000 },
+ --   { model = 'CIV23', price = 50000 },
+ --   { model = 'CIV24', price = 50000 },
+ --   { model = 'TLTYPES', price = 50000 },
+ --   { model = 'AST', price = 50000 },
+ --   { model = 'AMDBX', price = 50000 },
+ --   { model = 'CGTS', price = 50000 },
+ --   { model = 'BBENTAYGA', price = 50000 },
+ --   { model = 'Z419', price = 50000 },
+ --   { model = 'X6M', price = 50000 },
+--    { model = 'X5E53', price = 50000 },
+--    { model = 'M6F13', price = 50000 },
+ --   { model = 'M4F82', price = 50000 },
+    -- More civ cars here
+ --   { model = 'surron', price = 50000 }
+--}
+
 }

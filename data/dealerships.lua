@@ -12,7 +12,7 @@ return {
         groups = {
             ["default"] = {
                 switch = true,
-                testdrive = true,
+                testdrive = false,
                 purchase = true,
                 interact = true,
                 blip = true
@@ -43,34 +43,7 @@ return {
             vector4(-56.33, -1116.96, 25.96, 2.03)
         }
     },
-    ["Mission Row PD"] = {
-        categories = {"MRPD"},
-        blip = {
-            coords = vec3(458.82, -1017.13, 28.18),
-            sprite = 523,
-            color = 3,
-            scale = 0.8,
-            label = "Mission Row Police Garage",
-        },
-        groups = {
-            ["lspd"] = {
-                switch = true,
-                testdrive = true,
-                purchase = true,
-                interact = true,
-                blip = true
-            }
-        },
-        interact = {
-            pedModel = `csb_trafficwarden`,
-            pedCoords = vec4(458.82, -1017.13, 28.18, 90.48),
-            vehicleCoords = vec4(405.13, -957.99, -99.54, 156.02)
-        },
-        spawns = {
-            vec4(462.81, -1019.49, 27.68, 90.90),
-            vec4(462.99, -1014.55, 27.66, 91.79)
-        }
-    },
+    
     ["LSIA Plane Dealer"] = {
         categories = {"planes"},
         blip = {
